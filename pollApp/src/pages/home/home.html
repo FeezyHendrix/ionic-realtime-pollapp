@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+    Poll APP  
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list no-lines>
+    <ion-item *ngFor="let player of playerData">
+      <ion-row>
+        <ion-col col-6>
+            <ion-avatar>
+                <img [src]="player.image" [alt]="player.name" [ngClass]="getVoteClasses(player.shortName)">
+                <h4>{{player.name}}</h4>
+                <p>{{player.goals}} goals</p>
+                <p>{{player.assists}} assists</p>
+              </ion-avatar>
+        </ion-col>
+        <ion-col col-6>
+              <h1>VoteCount</h1>
+              <h1 text-center>{{voteCount[player.shortName]}}</h1>
+        </ion-col>
+      </ion-row> 
+      <button ion-button full round (click)="sendVotes(player)">Vote</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
