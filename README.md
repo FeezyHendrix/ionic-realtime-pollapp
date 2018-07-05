@@ -1,6 +1,8 @@
 # Ionic Realtime Pollapp
 
 An electronic polling system allows users cast their votes with ease without the hassle and stress of visiting a polling booth.
+<br>
+Follow the tutorial on [Pusher](https://pusher.com/tutorials/live-poll-ionic)
 
 ## Getting Started
 
